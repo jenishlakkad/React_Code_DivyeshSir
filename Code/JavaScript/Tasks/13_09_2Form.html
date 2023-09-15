@@ -13,8 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
  </head>
  <body>
-    <div class="container">
-        <form  id="userForm">
+    <div class="container border border-5 w-75 border-dark mt-3">
+        <form  id="userForm" class="w-75 mx-auto my-3 ">
+          <h1 class="text-center " style="font-style: italic; color: rgb(141, 77, 77);">User Form</h1>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address:-</label>
               <input type="email" class="form-control text" name="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -30,7 +31,7 @@
 
 
             <!-- ##################         Radio        -->
-            <div>
+            <div class="my-2">
               <label class="form-check-label" for="">Gender:-</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="Gender" id="inlineRadio1" value="Male">
@@ -47,7 +48,7 @@
             </div>
 
             <!-- ####################       Chkbox       -->           
-            <div>
+            <div class="my-2">
               <label class="form-check-label" for="">Hobbies:-</label>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="Hobbies" id="inlineCheckbox1" value="Dancing">
@@ -80,7 +81,7 @@
               </div>
 
 
-            <button type="button" onclick="saveUser()" class="btn btn-primary">Submit</button>
+            <button type="button" onclick="saveUser()" class=" my-2 btn btn-primary">Submit</button>
           </form>
     </div>
 
