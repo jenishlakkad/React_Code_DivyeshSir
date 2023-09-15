@@ -4,11 +4,11 @@
 //     Topic:- Making Form For 2nd Time
 //  -->
 
-let obj = {};
 let arr = [];
 let count = 0;
 let editId;
 const saveUser = () => {
+  let obj = {};
   // For Radio
   let rdb = document.querySelectorAll("input[type=radio]:checked");
   rdb.forEach((x) => {
@@ -36,16 +36,21 @@ const saveUser = () => {
     obj[x.name] = x.value;
   });
 
-  // For ID
-  count++;
-  obj.Id = count;
-
-  arr.push(obj);
-  obj = {};
-
-  // if(editId == undefined){
-
-  // }
+  
+  
+  if(editId == undefined){
+    // For ID
+    count++;
+    obj.Id = count; 
+    arr.push(obj);
+  }
+  else{
+    let index = arr.findIndex(x => x.Id == editId);
+    obj.Id = editId;
+    arr.splice(index,1,obj);
+    editId = undefined;    
+  }
+  // obj = {};
   userGrid();
   document.querySelector("#userForm").reset();
 };
@@ -97,10 +102,9 @@ const editUser = (id) => {
 };
 
 const deleteUser = (id) => {
-  let del = arr.findIndex((x) => x.id == id); //Here we Can't Use Find Method.Still dought? just try it replace findIndex with find
+  let del = arr.findIndex((x) => x.Id == id); //Here we Can't Use Find Method.Still dought? just try it replace findIndex with find
   arr.splice(del, 1);
   userGrid();
-  console.log(arr);
 };
 
 const userGrid = () => {
