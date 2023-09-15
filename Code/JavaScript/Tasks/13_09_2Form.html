@@ -1,0 +1,119 @@
+<!-- 
+//     Date: 13/09/23
+//     Day:- Thursday
+//     Topic:- Making Form For 2nd Time
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ </head>
+ <body>
+    <div class="container">
+        <form  id="userForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address:-</label>
+              <input type="email" class="form-control text" name="Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password:-</label>
+              <input type="password" class="form-control text" name="Password" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 ">
+                <label class="form-check-label" for="exampleCheck1">Name:-</label>
+              <input type="text" class="form-control text" name="Name" id="exampleCheck1">
+            </div>
+
+
+            <!-- ##################         Radio        -->
+            <div>
+              <label class="form-check-label" for="">Gender:-</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="inlineRadio1" value="Male">
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="inlineRadio2" value="Female">
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="inlineRadio3" value="Other"  >
+                    <label class="form-check-label" for="inlineRadio3">Other</label>
+                  </div>
+            </div>
+
+            <!-- ####################       Chkbox       -->           
+            <div>
+              <label class="form-check-label" for="">Hobbies:-</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Hobbies" id="inlineCheckbox1" value="Dancing">
+                    <label class="form-check-label" for="inlineCheckbox1">Dancing</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Hobbies" id="inlineCheckbox2" value="Codeing">
+                    <label class="form-check-label" for="inlineCheckbox2">Codeing</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="Hobbies" id="inlineCheckbox3" value="Reading"  >
+                    <label class="form-check-label" for="inlineCheckbox3">Reading</label>
+                  </div>
+            </div>
+
+            <div>
+                <label class="form-check-label" for="">Skill:-</label>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="Skill" id="inlineCheckbox12" value="Testing">
+                      <label class="form-check-label" for="inlineCheckbox12">Testing</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="Skill" id="inlineCheckbox22" value="Developing">
+                      <label class="form-check-label" for="inlineCheckbox22">Developing</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" name="Skill" id="inlineCheckbox32" value="Deploying"  >
+                      <label class="form-check-label" for="inlineCheckbox32">Deploying</label>
+                    </div>
+              </div>
+
+
+            <button type="button" onclick="saveUser()" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+
+    <div>
+        <table class="table table-dark table-striped mt-5 text-center">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Hobbies</th>
+                <th scope="col">Skill</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+              <!-- <tr>
+                <td>01</td>
+                <td>Jenish</td>
+                <td>asdfa</td>
+                <td>asdf@gamil.com</td>
+                <td>Male</td>
+                <td>Teaching</td>
+                <td>Scsdf</td>
+              </tr> -->
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="Js/13_09_2Form.js"></script>
+    
+ </body>
+ </html>
