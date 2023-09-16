@@ -80,8 +80,12 @@
                     </div>
               </div>
 
-              <!-- <input type="file" name="" id=""> -->
-
+              <div class="my-3"> 
+                <input type="file"  class="text"  onchange="previewImage()" name="Profile" id="img">
+              </div>
+              <div class=""  >
+                <img src="" alt="" style="width: 40px; height: 40px; display: none;" id="imageBox">
+              </div>
 
             <button type="button" onclick="saveUser()" class=" my-2 btn btn-primary">Submit</button>
           </form>
@@ -92,6 +96,7 @@
             <thead>
               <tr>
                 <th scope="col">ID</th>
+                <th scope="col">Profile</th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
                 <th scope="col">Name</th>

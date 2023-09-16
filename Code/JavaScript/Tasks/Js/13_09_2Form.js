@@ -7,7 +7,8 @@
 let arr = [];
 let count = 0;
 let editId;
-const saveUser = () => {
+let imageBox = document.querySelector("#imageBox");
+const saveUser = async () => {
   let obj = {};
   // For Radio
   let rdb = document.querySelectorAll("input[type=radio]:checked");
@@ -33,10 +34,18 @@ const saveUser = () => {
   // For text
   let text = document.querySelectorAll(".text");
   text.forEach((x) => {
-    obj[x.name] = x.value;
+    if(x.type == 'file'){
+      obj[x.name] = imageBox.src;
+    }
+    else{
+      obj[x.name] = x.value;
+    }
   });
 
-  
+  // For Image
+  // let file = document.querySelector('#img').files[0];
+  // obj.Profile = file ? await toBase64(file) : '';
+
   
   if(editId == undefined){
     // For ID
@@ -52,8 +61,11 @@ const saveUser = () => {
   }
   // obj = {};
   userGrid();
+  imageBox.style.display = 'none';
   document.querySelector("#userForm").reset();
 };
+
+
 
 // ###########################    EDITUSER
 const editUser = (id) => {
@@ -61,14 +73,30 @@ const editUser = (id) => {
   let ediUser = arr.find((x) => x.Id == id);
   editId = id;
 
-  // For Text
-  let text = document.querySelectorAll(".text");
-  text.forEach((x) => {
+  // For File
+  let inputs = document.querySelectorAll('.text');
+inputs.forEach(x => {
+  if(x.type == 'file'){
+    imageBox.style.display = 'block';
+    imageBox.src = ediUser[x.name];
+    console.log(imageBox.src);
+  }
+  else{
     x.value = ediUser[x.name];
-    // if(x.name == ediUser[x.name]){
-    //     console.log('asd');
-    // }
-  });
+    console.log('object');
+  }
+})
+
+  // For Text
+  // let text = document.querySelectorAll(".text");
+  // console.log(text);
+  // text.forEach((x) => {
+  //   x.value = ediUser[x.name];
+  //   // if(x.name == ediUser[x.name]){
+  //   //     console.log('asd');
+  //   // }
+  // });
+  
 
   // For Radio
   let radio = document.querySelectorAll("input[type=radio]");
@@ -113,6 +141,7 @@ const userGrid = () => {
     userString += `
     <tr>
         <td>${x.Id}</td>
+        <td><img src="${x.Profile}" width='40px' height='40px'/></td>
         <td>${x.Name}</td>
         <td>${x.Email}</td>
         <td>${x.Password}</td>
@@ -127,5 +156,19 @@ const userGrid = () => {
         `;
   });
   document.querySelector("#tBody").innerHTML = userString;
-  // console.log(userString);
 };
+
+
+const toBase64 = file => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = () => resolve(reader.result);
+  reader.onerror = reject;
+});
+
+const previewImage = async () => {
+  let file = document.querySelector('input[name=Profile]').files[0]
+  imageBox.style.display = 'block';
+  imageBox.src = await toBase64(file)
+  // console.log(imageBox.src);
+}
