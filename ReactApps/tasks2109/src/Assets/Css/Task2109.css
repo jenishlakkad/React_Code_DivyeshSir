@@ -1,0 +1,23 @@
+*{
+    border: 1px solid red;
+
+}
+.main{
+    width: 25%;
+    /* float: left; */
+}
+.mainImgDiv{
+    display: flex;
+    text-align: center;
+}
+.mainImgDiv > div{
+    /* text-align: start; */
+}
+img{
+    width: 120px;
+    margin: 0px;
+    height: 90px;
+}
+.dis{
+    margin: 0px 0px;
+}

@@ -1,0 +1,30 @@
+.main{
+    display: flex;
+    width: 25%;
+    margin: 5px;
+}
+.comp{
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+}
+.i1{
+    display: flex;
+}   
+p{
+    margin: 0px 0px 5px 0px;
+}
+.i2{
+    display: flex;
+}
+.imgDiv{
+    padding: 5px;
+    width: 50%; 
+}
+.img{
+    height: 85px;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
