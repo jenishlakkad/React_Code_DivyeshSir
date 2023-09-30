@@ -12,6 +12,8 @@ import FunctionComp2109 from './Components/FunctionComp2109';
 import FormHendeling2409 from './Components/FormHendeling2409';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageAndBase64__2709 from './Components/ImageAndBase64__2709';
+import FormHendelingClass309 from './Components/FormHendelingClass309';
+import ClassLifeCycle from './Components/ClassLifeCycle';
 
 function App() {
   return (
@@ -31,7 +33,11 @@ function App() {
 
       {/* <FormHendeling2409/> */}
 
-      <ImageAndBase64__2709/>
+      {/* <ImageAndBase64__2709/> */}
+
+      {/* <FormHendelingClass309/> */}
+
+      <ClassLifeCycle/>
     </>
   );
 }
