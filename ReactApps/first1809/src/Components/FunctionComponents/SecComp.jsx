@@ -1,9 +1,9 @@
 import React from 'react'
-import '../assets/css/FirstComp.css'
-import img21 from '../assets/imges/21.jpg'
-import img22 from '../assets/imges/22.jpg'
-import img23 from '../assets/imges/23.jpg'
-import img24 from '../assets/imges/24.jpg'
+import '../../assets/css/FirstComp.css'
+import img21 from '../../assets/imges/21.jpg'
+import img22 from '../../assets/imges/22.jpg'
+import img23 from '../../assets/imges/23.jpg'
+import img24 from '../../assets/imges/24.jpg'
 const SecComp = () => {
   return (
     <>

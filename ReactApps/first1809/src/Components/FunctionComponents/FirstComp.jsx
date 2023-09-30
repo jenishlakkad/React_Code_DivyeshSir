@@ -1,9 +1,10 @@
 import React from 'react'
-import img1 from '../assets/imges/1.jpg'
-import img2 from '../assets/imges/2.jpg'
-import img3 from '../assets/imges/3.jpg'
-import img4 from '../assets/imges/4.jpg'
-import '../assets/css/FirstComp.css'
+import img1 from '../../assets/imges/1.jpg'
+import img2 from '../../assets/imges/2.jpg'
+// import img2 from '../assets/imges/2.jpg'
+import img3 from '../../assets/imges/3.jpg'
+import img4 from '../../assets/imges/4.jpg'
+import '../../assets/css/FirstComp.css'
 const FirstComp = () => {
   return (
     <>
