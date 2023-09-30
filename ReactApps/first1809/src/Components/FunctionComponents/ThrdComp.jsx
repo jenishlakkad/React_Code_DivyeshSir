@@ -1,9 +1,9 @@
 import React from 'react'
-import img31 from '../assets/imges/31.jpg'
-import img32 from '../assets/imges/32.jpg'
-import img33 from '../assets/imges/33.jpg'
-import img34 from '../assets/imges/34.jpg'
-import '../assets/css/FirstComp.css'
+import img31 from '../../assets/imges/31.jpg'
+import img32 from '../../assets/imges/32.jpg'
+import img33 from '../../assets/imges/33.jpg'
+import img34 from '../../assets/imges/34.jpg'
+import '../../assets/css/FirstComp.css'
 
 const ThrdComp = () => {
   return (

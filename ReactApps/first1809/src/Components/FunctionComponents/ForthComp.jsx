@@ -1,9 +1,9 @@
 import React from 'react'
-import img41 from '../assets/imges/41.jpg'
-import img42 from '../assets/imges/42.jpg'
-import img43 from '../assets/imges/43.jpg'
-import img44 from '../assets/imges/44.jpg'
-import '../assets/css/FirstComp.css'
+import img41 from '../../assets/imges/41.jpg'
+import img42 from '../../assets/imges/42.jpg'
+import img43 from '../../assets/imges/43.jpg'
+import img44 from '../../assets/imges/44.jpg'
+import '../../assets/css/FirstComp.css'
 
 const ForthComp = () => {
   return (
