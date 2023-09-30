@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       {/* <Lecture13/> */}
-      {/* <FormPractice1/> */}
-      <FormPractice2/>
+      <FormPractice1/>
+      {/* <FormPractice2/> */}
     </>
   );
 }

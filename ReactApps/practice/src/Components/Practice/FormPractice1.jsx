@@ -7,13 +7,16 @@ import { useState } from 'react'
 
 const FormPractice1 = () => {
         let [obj, setobj] = useState({})
-        let [array, setarray] = useState([])
+        // let [array, setarray] = useState([])
+        let [array, setarray] = useState(JSON.parse(localStorage.getItem('array')) || [])
         let [blankObj, setblankObj] = useState({})
-        let [count, setcount] = useState(0)
+        // let [count, setcount] = useState(0)
+        let [count, setcount] = useState(JSON.parse(localStorage.getItem('count')) || 0)
 
 
 
-    const getData = (e) => {
+
+    const getData = async (e) => {
         if(e.target.type == 'checkbox')
         {
             obj[e.target.name] = obj[e.target.name] ?? []
@@ -26,6 +29,11 @@ const FormPractice1 = () => {
             {
                 obj[e.target.name] = obj[e.target.name].filter(x => x != e.target.value)
             }
+        }
+        else if(e.target.type == 'file')
+        {
+            obj[e.target.name] = await toBase64(e.target.files[0])
+
         }
         else
         {
@@ -46,17 +54,26 @@ const FormPractice1 = () => {
             setcount(count)
             obj.id = count;
             array.push(obj)
+            localStorage.setItem('count',JSON.stringify(count))
         }
         else{
             let index = array.findIndex(x => x.id == obj.id)
             array.splice(index,1,obj)
         }
         setarray([...array])
+        localStorage.setItem('array',JSON.stringify(array))
         // obj = {}
         setobj({...blankObj})
         // console.log(array);
     }
 
+    const toBase64 = file => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+    });
+    
 
     const editData = (id) =>{
         let editObj = array.find(x=> x.id == id)
@@ -68,6 +85,7 @@ const FormPractice1 = () => {
         let index = array.findIndex(x => x.id == id)
         array.splice(index,1)
         setobj({...obj})
+        localStorage.setItem('array',JSON.stringify(array))
     }
 
   return (
@@ -109,8 +127,14 @@ const FormPractice1 = () => {
             </div>
             <div className="form-check form-check-inline">
             <input className="form-check-input" name='hobbies' onChange={getData}  checked={obj.hobbies?.includes('Submit') } type="checkbox" id="inlineCheckbox3" value="Submit" />
+
             <label className="form-check-label">Submit</label>
         </div><br />
+            <label htmlFor="">Image</label>
+            <input type="file" onChange={getData} name="file" id="file" /> <br />
+            <img src={obj.file} alt="" className='my-2' style={{width:'auto',height:'auto', maxWidth:'60px', maxHeight:'100px'}} id='image' />
+
+             <br />
 
         <button type="button" onClick={saveData} className="btn btn-primary my-2">Submit</button>
     </form>
@@ -119,6 +143,7 @@ const FormPractice1 = () => {
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Image</th>
                 <th>Email</th>
                 <th>Password</th>
                 <th>Gender</th>
@@ -132,6 +157,7 @@ const FormPractice1 = () => {
                 return(
                     <tr key={i}>
                         <td>{x.id}</td>
+                        <td><img src={x.file} alt="" style={{width:'auto',height:'auto', maxWidth:'60px', maxHeight:'100px'}} /></td>
                         <td>{x.email}</td>
                         <td>{x.password}</td>
                         <td>{x.Gender}</td>

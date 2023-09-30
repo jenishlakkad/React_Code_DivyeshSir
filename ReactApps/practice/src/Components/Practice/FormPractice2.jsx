@@ -78,6 +78,7 @@ const FormPractice2 = () => {
         array.splice(index,1)
         setobj({...obj})
         console.log('Pass');
+        localStorage.setItem('array', JSON.stringify(array))
     }
 
     const editData = (id) =>{

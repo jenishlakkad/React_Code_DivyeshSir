@@ -35,9 +35,9 @@ function App() {
 
       {/* <ImageAndBase64__2709/> */}
 
-      {/* <FormHendelingClass309/> */}
+      <FormHendelingClass309/>
 
-      <ClassLifeCycle/>
+      {/* <ClassLifeCycle/> */}
     </>
   );
 }
