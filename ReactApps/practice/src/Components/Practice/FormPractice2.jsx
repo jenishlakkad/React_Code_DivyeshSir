@@ -96,7 +96,7 @@ const FormPractice2 = () => {
         </div>
         <div className="mb-3">
             <label  className="form-label">Password</label>
-            <input type="password" name='password' value={obj.password} className="form-control" onChange={getData} id="exampleInputPassword1"/>
+            <input type="password" name='password' autoComplete='on' value={obj.password} className="form-control" onChange={getData} id="exampleInputPassword1"/>
         </div>
 
         <label className="form-check-label" >Gender</label> <br />
