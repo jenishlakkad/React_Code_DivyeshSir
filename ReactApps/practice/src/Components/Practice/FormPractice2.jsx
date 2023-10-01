@@ -95,10 +95,14 @@ const FormPractice2 = () => {
         <div className="mb-3">
             <label  className="form-label">Password</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <input type="password" name='password' autoComplete='on' value={obj.password} className="form-control" onChange={getData} id="exampleInputPassword1"/>
 =======
             <input type="password" name='password' value={obj.password ?? ''} className="form-control" onChange={getData} id="exampleInputPassword1"/>
 >>>>>>> abdf469 (class Component)
+=======
+            <input type="password" name='password' value={obj.password ?? ''} className="form-control" onChange={getData} id="exampleInputPassword1"/>
+>>>>>>> abdf469b764ab7c55229501b8f51aa1bf9f9d1af
         </div>
 
         <label className="form-check-label" >Gender</label> <br />
