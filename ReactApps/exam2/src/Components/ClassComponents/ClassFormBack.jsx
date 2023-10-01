@@ -12,7 +12,7 @@ export default class ClassFormBack extends Component {
             <td>{this.props.obj.name}</td>
             <td>{this.props.obj.lastName}</td>
             <td>{this.props.obj.gender}</td>
-            <td>{this.props.obj.hobbies}</td>
+            <td>{this.props.obj.hobbies?.join()}</td>
             <td>{this.props.obj.city}</td>
             <td>{this.props.obj.state}</td>
             <td>

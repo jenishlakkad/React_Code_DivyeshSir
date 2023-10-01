@@ -12,9 +12,10 @@ import ClassFormBack from './ClassFormBack';
         super()
         this.state = {
             obj : {},
-            array : [],
+            // array : [],
+            array : JSON.parse(localStorage.getItem('array')) ?? [],
             blankObj : {},
-            count : 0,
+            count : JSON.parse(localStorage.getItem('count')) ?? 0,
             show : false,
             validated : false
         }
@@ -45,8 +46,6 @@ import ClassFormBack from './ClassFormBack';
             }
             else{
                 // this.state.obj[e.target.name] = this.state.obj[e.target.name].filter(x => x != e.target.value)
-                console.log('object');
-
                 this.state.obj[e.target.name] = this.state.obj[e.target.name].filter(x => x != e.target.value)
             }
         }
@@ -65,13 +64,20 @@ import ClassFormBack from './ClassFormBack';
             this.state.count++
             this.state.obj.id = this.state.count
             this.state.array.push(this.state.obj)
-            
+            localStorage.setItem('count',JSON.stringify(this.state.count))
+        }
+        else
+        {
+            let index = this.state.array.findIndex(x => x.id == this.state.obj.id)
+            this.state.array.splice(index, 1, this.state.obj)
         }
         this.state.obj = {...this.state.blankObj}
         this.setState({...this.state})
+        localStorage.setItem('array',JSON.stringify(this.state.array))
         console.log(this.state.array);
       }
       editUser = (id) => {
+        this.state.show = true
         let editObj = this.state.array.find(x => x.id == id)
         this.state.obj = {...editObj}
         this.setState({...this.state})
