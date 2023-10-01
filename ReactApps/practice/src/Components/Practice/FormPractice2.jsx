@@ -68,9 +68,7 @@ const FormPractice2 = () => {
         }
         setArray([...array])
         localStorage.setItem('array', JSON.stringify(array))
-        obj = {}
         setobj({...blankObj})
-        console.log(array);
     }
 
     const deleteData = (id) =>{
@@ -92,24 +90,32 @@ const FormPractice2 = () => {
         <form className='w-50 mx-auto my-4'>
         <div className="mb-3">
             <label  className="form-label">Email </label>
-            <input type="email" name='email' value={obj.email} className="form-control" onChange={getData} id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            <input type="email" name='email' value={obj.email ?? ''} className="form-control" onChange={getData} id="exampleInputEmail1" aria-describedby="emailHelp"/>
         </div>
         <div className="mb-3">
             <label  className="form-label">Password</label>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <input type="password" name='password' autoComplete='on' value={obj.password} className="form-control" onChange={getData} id="exampleInputPassword1"/>
+=======
+            <input type="password" name='password' value={obj.password ?? ''} className="form-control" onChange={getData} id="exampleInputPassword1"/>
+>>>>>>> abdf469 (class Component)
+=======
+            <input type="password" name='password' value={obj.password ?? ''} className="form-control" onChange={getData} id="exampleInputPassword1"/>
+>>>>>>> abdf469b764ab7c55229501b8f51aa1bf9f9d1af
         </div>
 
         <label className="form-check-label" >Gender</label> <br />
             <div className="form-check form-check-inline">
-            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Male'} type="radio" onChange={getData}   id="inlineCheckbox1"  value="Male"/>
+            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Male' ?? ''} type="radio" onChange={getData}   id="inlineCheckbox1"  value="Male"/>
             <label className="form-check-label"  >Male</label>
             </div>
             <div className="form-check form-check-inline">
-            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Female'} type="radio" onChange={getData}  id="inlineCheckbox2" value="Female"/>
+            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Female' ?? ''} type="radio" onChange={getData}  id="inlineCheckbox2" value="Female"/>
             <label className="form-check-label"  >Female</label>
             </div>
             <div className="form-check form-check-inline">
-            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Other'} type="radio" onChange={getData}  id="inlineCheckbox3" value="Other"/>
+            <input className="form-check-input" name='Gender' checked={obj.Gender == 'Other' ?? ''} type="radio" onChange={getData}  id="inlineCheckbox3" value="Other"/>
             <label className="form-check-label"  >Other</label>
             </div>
             <br />
@@ -117,15 +123,15 @@ const FormPractice2 = () => {
         <label className="form-check-label" >Hobbies</label><br />
 
         <div className="form-check form-check-inline">
-            <input className="form-check-input" checked={obj.hobbies?.includes('Reading')} name='hobbies' onChange={getData} type="checkbox" id="inlineCheckbox1" value="Reading"/>
+            <input className="form-check-input" checked={obj.hobbies?.includes('Reading') ?? ''} name='hobbies' onChange={getData} type="checkbox" id="inlineCheckbox1" value="Reading"/>
             <label className="form-check-label" >Reading</label>
             </div>
             <div className="form-check form-check-inline">
-            <input className="form-check-input" checked={obj.hobbies?.includes('Coding')} name='hobbies' onChange={getData}  type="checkbox" id="inlineCheckbox2" value="Coding"/>
+            <input className="form-check-input" checked={obj.hobbies?.includes('Coding') ?? ''} name='hobbies' onChange={getData}  type="checkbox" id="inlineCheckbox2" value="Coding"/>
             <label className="form-check-label">Coding</label>
             </div>
             <div className="form-check form-check-inline">
-            <input className="form-check-input" checked={obj.hobbies?.includes('Submit')} name='hobbies' onChange={getData}   type="checkbox" id="inlineCheckbox3" value="Submit" />
+            <input className="form-check-input" checked={obj.hobbies?.includes('Submit') ?? ''} name='hobbies' onChange={getData}   type="checkbox" id="inlineCheckbox3" value="Submit" />
             <label className="form-check-label">Submit</label>
         </div><br />
 
