@@ -5,10 +5,10 @@ let offer = [
     {
         img: "https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/durango/vlp/desktop/MY23Durango_VLP_Desktop_hellcat.jpg.image.1000.jpg",
         title: "YOUR SHINING ARMOR",
-        link: "View"
+        link: "View "
     },
     {
-        img: "https://www.dodge.com/content/dam/fca-brands/na/dodge/en_us/2023/durango/vlp/desktop/MY23Durango_VLP_Desktop_safety2.jpg",
+        img: "https://media.ed.edmunds-media.com/dodge/durango/2024/oem/2024_dodge_durango_4dr-suv_citadel_fq_oem_1_1600.jpg",
         title: "LIGHT UP THE TRACK",
         link: "View"
     }

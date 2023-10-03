@@ -12,7 +12,7 @@ const Compo_5 = (props) => {
 
   return (
     <> 
-        <div className="c3MainCard col ">
+        <div className="c3MainCard col  mx-auto  ">
         <Carousel data-bs-theme="dark">
       <Carousel.Item  style={{height:'300px'}}>
         {/* <img src={props.img} alt="" className='d-block w-100 ' style={{height:'90vh'}} /> */}

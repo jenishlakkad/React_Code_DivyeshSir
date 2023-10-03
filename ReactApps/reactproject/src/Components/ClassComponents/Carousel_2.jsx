@@ -19,8 +19,8 @@ const Carousel_2 = () => {
        <div  className='text-uppercase crausal' >
         <Carousel.Caption >
         {/* <h3 style={{color:'#FFFFFF',marginBottom:'0px'}} className=''>fruit organic food</h3> */}
-        <span style={{fontSize:'80px',display:'block', fontWeight:'bolder',color:'gray'} }className='my-0'>big sale</span>
-        <p style={{fontSize:'18px', fontWeight:'bolder',color:'#FFFFFF'}}  className=' py-1'>up to 30% off on all products</p>
+        <span style={{fontSize:'80px',display:'block', fontWeight:'bolder',color:'gray'} }className='my-0'>You are wellcome</span>
+        <p style={{fontSize:'18px', fontWeight:'bolder',color:'#FFFFFF'}}  className=' py-1'>Enhence your Driving exprience..</p>
         <button style={{background:'transparent',border:'2px solid #FFFFFF', padding:'8px'}}>See More</button>
         </Carousel.Caption>
         </div>
@@ -36,7 +36,7 @@ const Carousel_2 = () => {
         <div  className='text-uppercase crausal2' >
         <Carousel.Caption>
         <span style={{fontSize:'80px', fontWeight:'bolder',color:'gray'}} className='my-0'>You are wellcome</span>
-        <p style={{color:'#FFFFFF',marginBottom:'0px'}} className=' py-1'>Organic products grown with love</p>
+        <p style={{color:'#FFFFFF',marginBottom:'0px'}} className=' py-1'>See your dream car here...</p>
         <button style={{background:'transparent',border:'2px solid #FFFFFF', padding:'8px',marginTop:'30px'}}>See More</button>
    
         </Carousel.Caption>

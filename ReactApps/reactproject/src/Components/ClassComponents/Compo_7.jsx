@@ -24,12 +24,12 @@
     ]
    return (
      <>
-        <h1>Compo_7</h1>
-        <div className="row row-cols-1 bg-black w-100 row-cols-md-3 g-4">
+        
+        <div className="row bg-black w-100 py-5  g-4  row-cols-1 row-cols-lg-3  row-cols-md-2">
             {
                 arr.map((x,i) => {
                     return(
-                    <div key={i} className="col"> 
+                    <div key={i} className="col  mx-auto "> 
                         <div className="card h-100">
                         <video width="100%" height="240" autoPlay   loop>
                             <source src={x.video} type="video/mp4"/>

@@ -12,7 +12,7 @@ const Compo_3 = (props) => {
     <> 
     {/* <div className="c3MainDiv bg-black py-5 col-4 ">
      <div style={{width: '90%'}} className="row row-cols-1 mx-auto row-cols-lg-3  row-cols-md-2  g-4"> */}
-        <div className="c3MainCard col">
+        <div className="c3MainCard col  mx-auto ">
             <div className="c3Cards card h-100">
             <img src={props.img1} className="card-img-top h-50" alt="..."/>
             <div className="card-body pb-0">

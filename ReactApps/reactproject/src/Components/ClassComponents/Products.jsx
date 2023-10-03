@@ -22,11 +22,11 @@ const Products = () => {
             <div className='container-fluid pb-5' style={{backgroundColor : "rgb(130, 127, 127)"}}>
                 <h1 className='new-title py-5 text-white'>Races..</h1>
 
-                <div className="container mx-auto row row-cols-md-2  row-cols-1 g-5" >
+                <div className="container mx-auto row row-cols-md-2  row-cols-1 g-5 " >
                     {
                         car?.map((item, i) => {
                             return (
-                                <div key={i} className="col">
+                                <div key={i} className=" mx-auto  col">
                                     <Card className='h-100 mx-auto bg-dark border-0'>
                                         <Card.Img variant="top" style={{height : "400px"}} className='new-img' src={item.img} />
                                         <Card.Body>

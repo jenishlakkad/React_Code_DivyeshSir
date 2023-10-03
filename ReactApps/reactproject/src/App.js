@@ -18,16 +18,16 @@ function App() {
   return (
     
     <div className="App">
-      {/* <NavbarComp/>
+      <NavbarComp/>
       <Carousel_2/>
       <Compo_3Data />
       <Compo_4/>
       <Compo_5Data/>
-      <Products/> */}
+      <Products/>
       <Compo_7/>
-      {/* <Location/>
+      <Location/>
       <Offer/>
-      <Footer/> */}
+      <Footer/>
 
 
     </div>
