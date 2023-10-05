@@ -14,8 +14,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ImageAndBase64__2709 from './Components/FunctionComponents/ImageAndBase64__2709';
 import FormHendelingClass309 from './Components/ClassComponents/FormHendelingClass309';
 import ClassLifeCycle from './Components/ClassComponents/ClassLifeCycle';
+import C_04_10_LifeCycle1 from './Components/ClassComponents/C_04_10_LifeCycle1';
+import { useState } from 'react';
+import C_05_10_LifeCycle2 from './Components/ClassComponents/C_05_10_LifeCycle2';
 
 function App() {
+  const [name, setname] = useState('Jenish Lakkad')
+  const [unMou, setunMou] = useState(true)
+  const changeName = () =>{
+    setname('Krisa Vasoya')
+  }
+
+  const doUnmounting = () =>{
+    // if(unMou == true){
+    //   setunMou(<C_05_10_LifeCycle2/>)
+    // }
+    // else{
+    //   setunMou(true)
+
+    // }
+  }
   return (
     <>
       {/* <FirstComp/>
@@ -35,9 +53,18 @@ function App() {
 
       {/* <ImageAndBase64__2709/> */}
 
-      <FormHendelingClass309/>
+      {/* <FormHendelingClass309/> */}
 
       {/* <ClassLifeCycle/> */}
+
+      {/* <C_04_10_LifeCycle1 changeName={changeName} name = {name}/> */}
+
+      {
+        unMou 
+      }
+      {/* <C_05_10_LifeCycle2/> */}
+
+      <button onClick={() =>doUnmounting()} className='text-center'>Clickme</button>
     </>
   );
 }
