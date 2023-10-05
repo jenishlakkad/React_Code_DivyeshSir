@@ -6,6 +6,7 @@ import FormPractice1 from './Components/Practice/FormPractice1';
 import FormPractice2 from './Components/Practice/FormPractice2';
 import ClassFormPrac from './Components/Practice/ClassFormPrac';
 import HelpForm from './Components/Practice/HelpForm';
+import F_04_10_UseState from './Components/FunctionComponents/F_04_10_UseState';
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       {/* <FormPractice1/> */}
       {/* <FormPractice2/> */}
 
-      <ClassFormPrac/>
+      {/* <ClassFormPrac/> */}
 
       {/* <HelpForm/> */}
+
+      <F_04_10_UseState/>
     </>
   );
 }
