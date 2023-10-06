@@ -17,6 +17,8 @@ import ClassLifeCycle from './Components/ClassComponents/ClassLifeCycle';
 import C_04_10_LifeCycle1 from './Components/ClassComponents/C_04_10_LifeCycle1';
 import { useState } from 'react';
 import C_05_10_LifeCycle2 from './Components/ClassComponents/C_05_10_LifeCycle2';
+import F_06_10_UseContext from './Components/FunctionComponents/F_06_10_UseContext';
+import C_06_10_UseContext from './Components/ClassComponents/C_06_10_UseContext';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -64,7 +66,11 @@ function App() {
       }
       {/* <C_05_10_LifeCycle2/> */}
 
-      <button onClick={() =>doUnmounting()} className='text-center'>Clickme</button>
+      {/* <button onClick={() =>doUnmounting()} className='text-center'>Clickme</button> */}
+
+      {/* <F_06_10_UseContext/> */}
+
+      <C_06_10_UseContext/>
     </>
   );
 }
