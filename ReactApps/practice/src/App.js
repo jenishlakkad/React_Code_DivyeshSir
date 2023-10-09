@@ -9,8 +9,9 @@ import HelpForm from './Components/Practice/HelpForm';
 import F_04_10_UseState from './Components/FunctionComponents/F_04_10_UseState';
 import F_09_10_LifeCycleCRUD from './Components/FunctionComponents/F_09_10_LifeCycleCRUD';
 import C_09_10_LifeCycleCRUD from './Components/ClassComponents/C_09_10_LifeCycleCRUD';
-import C_09_10_Form_Context from './Components/ClassComponents/C_09_10_Form_Context';
-import C_09_10_MainContext from './Components/ClassComponents/C_09_10_MainContext';
+// import C_09_10_Form_Context from './Components/ClassComponents/C_09_10_Form_Context';
+import F_09_10_MainContext from './Components/FunctionComponents/F_09_10_MainContext';
+// import F_09_10_MainContext from './Components/ClassComponents/F_09_10_MainContext';
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
 
       {/* <C_09_10_LifeCycleCRUD/> */}
 
-      <C_09_10_MainContext/>
+      {/* <F_09_10_MainContext/> */}
+
     </>
   );
 }

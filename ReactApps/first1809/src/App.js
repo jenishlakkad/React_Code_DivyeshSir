@@ -19,6 +19,7 @@ import { useState } from 'react';
 import C_05_10_LifeCycle2 from './Components/ClassComponents/C_05_10_LifeCycle2';
 import F_06_10_UseContext from './Components/FunctionComponents/F_06_10_UseContext';
 import C_06_10_UseContext from './Components/ClassComponents/C_06_10_UseContext';
+import F_09_10_Api1 from './Components/FunctionComponents/F_09_10_Api1';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -70,7 +71,9 @@ function App() {
 
       {/* <F_06_10_UseContext/> */}
 
-      <C_06_10_UseContext/>
+      {/* <C_06_10_UseContext/> */}
+
+      <F_09_10_Api1/>
     </>
   );
 }

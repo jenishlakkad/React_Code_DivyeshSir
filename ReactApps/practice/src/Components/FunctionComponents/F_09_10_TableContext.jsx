@@ -1,6 +1,6 @@
  import React from 'react'
  
- const C_09_10_TableContext = () => {
+ const F_09_10_TableContext = () => {
    return (
     <>
         <table className="table border-1 table-dark">
@@ -15,9 +15,14 @@
             <th>Action</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            
+          </tr>
+        </tbody>
         </table>
     </>
    )
  }
  
- export default C_09_10_TableContext
+ export default F_09_10_TableContext
