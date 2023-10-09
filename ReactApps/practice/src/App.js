@@ -7,6 +7,10 @@ import FormPractice2 from './Components/Practice/FormPractice2';
 import ClassFormPrac from './Components/Practice/ClassFormPrac';
 import HelpForm from './Components/Practice/HelpForm';
 import F_04_10_UseState from './Components/FunctionComponents/F_04_10_UseState';
+import F_09_10_LifeCycleCRUD from './Components/FunctionComponents/F_09_10_LifeCycleCRUD';
+import C_09_10_LifeCycleCRUD from './Components/ClassComponents/C_09_10_LifeCycleCRUD';
+import C_09_10_Form_Context from './Components/ClassComponents/C_09_10_Form_Context';
+import C_09_10_MainContext from './Components/ClassComponents/C_09_10_MainContext';
 
 function App() {
   return (
@@ -19,7 +23,13 @@ function App() {
 
       {/* <HelpForm/> */}
 
-      <F_04_10_UseState/>
+      {/* <F_04_10_UseState/> */}
+
+      {/* <F_09_10_LifeCycleCRUD/> */}
+
+      {/* <C_09_10_LifeCycleCRUD/> */}
+
+      <C_09_10_MainContext/>
     </>
   );
 }

@@ -13,6 +13,7 @@ const FormPractice1 = () => {
         // let [count, setcount] = useState(0)
         let [count, setcount] = useState(JSON.parse(localStorage.getItem('count')) || 0)
 
+        
 
 
 
@@ -84,7 +85,8 @@ const FormPractice1 = () => {
     const deleteData = (id) =>{
         let index = array.findIndex(x => x.id == id)
         array.splice(index,1)
-        setobj({...obj})
+        setarray([...array])
+        // setobj({...obj})
         localStorage.setItem('array',JSON.stringify(array))
     }
 
