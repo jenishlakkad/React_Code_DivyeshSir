@@ -11,6 +11,7 @@ import F_09_10_LifeCycleCRUD from './Components/FunctionComponents/F_09_10_LifeC
 import C_09_10_LifeCycleCRUD from './Components/ClassComponents/C_09_10_LifeCycleCRUD';
 // import C_09_10_Form_Context from './Components/ClassComponents/C_09_10_Form_Context';
 import F_09_10_MainContext from './Components/FunctionComponents/F_09_10_MainContext';
+import F_14_10_Api1 from './Components/FunctionComponents/F_14_10_Api1';
 // import F_09_10_MainContext from './Components/ClassComponents/F_09_10_MainContext';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
 
       {/* <F_09_10_MainContext/> */}
 
+      <F_14_10_Api1/>
     </>
   );
 }
