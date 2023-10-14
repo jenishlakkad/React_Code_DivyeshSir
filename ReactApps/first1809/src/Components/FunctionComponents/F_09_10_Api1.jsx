@@ -52,9 +52,6 @@ const F_09_10_Api1 = () => {
     }
   return (
     <>
-    {
-        // console.log(array)
-    }
         <h1 className='text-center'>API</h1>
         <div>
             <span>{message}</span>
