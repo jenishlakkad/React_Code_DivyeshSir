@@ -14,8 +14,7 @@ const F_09_10_Api1 = () => {
             console.log(res.data);
         }).catch((err) =>{
             console.log(err);
-        })
-        
+        })  
     }
 
     const saveData = (e) => {

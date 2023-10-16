@@ -20,6 +20,8 @@ import C_05_10_LifeCycle2 from './Components/ClassComponents/C_05_10_LifeCycle2'
 import F_06_10_UseContext from './Components/FunctionComponents/F_06_10_UseContext';
 import C_06_10_UseContext from './Components/ClassComponents/C_06_10_UseContext';
 import F_09_10_Api1 from './Components/FunctionComponents/F_09_10_Api1';
+import F_16_10_UseMemo from './Components/FunctionComponents/F_16_10_UseMemo';
+import F_16_10_CallBack from './Components/FunctionComponents/F_16_10_CallBack';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -73,7 +75,11 @@ function App() {
 
       {/* <C_06_10_UseContext/> */}
 
-      <F_09_10_Api1/>
+      {/* <F_09_10_Api1/> */}
+
+      {/* <F_16_10_UseMemo/> */}
+
+      <F_16_10_CallBack/>
     </>
   );
 }
