@@ -1,20 +1,27 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import { getApi } from '../JS/F_09_10_Api';
 
 const F_09_10_Api1 = () => {
     const [array,setarray] = useState([])
-    const [message, setmessage] = useState('')
     const [obj, setobj] = useState({})
     const [emptyObj, setemptyObj] = useState({})
     
-    const getApi = () => {
-        
-        axios.get('https://student-api.mycodelibraries.com/api/student/get').then((res) =>{
-            setarray([...res.data.data])
-            console.log(res.data);
-        }).catch((err) =>{
-            console.log(err);
-        })  
+    // const getApi = () => { 
+    //     axios.get('https://student-api.mycodelibraries.com/api/student/get').then((res) =>{
+    //         res.data.data.forEach(x => {
+    //             x.hobbies = x.hobbies.split(',')
+    //         });
+    //         setarray([...res.data.data])
+    //         console.log(res.data.data);
+    //     }).catch((err) =>{
+    //         console.log(err);
+    //     }) 
+    // }
+
+    const axasdy = async () =>{
+        let a = await getApi()
+        setarray([...a])
     }
 
     const saveData = (e) => {
@@ -34,47 +41,45 @@ const F_09_10_Api1 = () => {
         else{
             obj[e.target.name] = e.target.value
             emptyObj[e.target.name] = ''
-        }
-        // setobj({...obj})
+        } 
         setemptyObj({...emptyObj})
     }
+    
     const addApi = () => {
-        // let obj1 =  {
-        //     "firstName": "Shaikh23",
-        //     "lastName": "Irshad23",
-        //     "age": 12,
-        //     "hobbies": "Reading,Exersice",
-        //     "gender": "Male",
-        //     "city": "Surat"
-        //   }
-        // console.log(emptyObj);
-        console.log(obj);
-        axios.post('https://student-api.mycodelibraries.com/api/student/add',obj).then((res) => {
-            getApi()
-          console.log(res);
-        })
-
-        setobj(emptyObj)
-    }
-
-    const deleteApi = async () => {
-        await axios.get('https://student-api.mycodelibraries.com/api/student/get').then((res) =>{
-            res.data.data.map(x => {
-                axios.delete('https://student-api.mycodelibraries.com/api/student/delete?id='+x._id).then((res)=>{
-                // axios.delete(`https://student-api.mycodelibraries.com/api/student/delete?id=${x._id}`).then((res)=>{
-                    getApi()
-                })
+        if(obj._id){
+            obj.id =   obj._id
+            axios.post('https://student-api.mycodelibraries.com/api/student/update',obj).then((res) => {
+                axasdy()
             })
-        })
+        }  
+        else{
+            axios.post('https://student-api.mycodelibraries.com/api/student/add',obj).then((res) => {
+                axasdy()
+            })
+        }
+        console.log(obj);
+        setobj({...emptyObj})
     }
+
+    const apiDelete = (id) => {
+        axios.delete('https://student-api.mycodelibraries.com/api/student/delete?id='+id).then((res)=>{
+            axasdy()
+                    })
+        console.log(obj);
+    }
+    
+    const apiEdit = (x) => {
+        setobj({...x})
+        console.log(obj);
+    }
+
   return (
     <>
         <h1 className='text-center'>API</h1>
         <div className='text-center'>
-            <span>{message}</span>
-            <button type='button' className='btn btn-info mx-5' onClick={getApi}>Get</button>
+            <button type='button' className='btn btn-info mx-5' onClick={axasdy}>Get</button>
             <button type='button' className='btn btn-dark mx-5' onClick={addApi}>Get</button>
-            <button type='button' className='btn btn-danger mx-5' onClick={deleteApi}>Get</button>
+            {/* <button type='button' className='btn btn-danger mx-5' onClick={deleteApi}>Get</button> */}
         </div>
 
         <form action="" className='form w-50 mx-auto mt-4'> 
@@ -125,7 +130,7 @@ const F_09_10_Api1 = () => {
                     <label className="form-check-label" htmlFor="inlineCheckbox3">Dancing</label>
                 </div>
             </div>
-            <button type="button" onClick={addApi} className="btn btn-primary">Submit</button>
+            <button type="button" onClick={() => addApi()} className="btn btn-primary">Submit</button>
         </form>
 
         <table className='table w-50 mx-auto'>
@@ -137,6 +142,7 @@ const F_09_10_Api1 = () => {
                     <th>Age</th>
                     <th>Gender</th>
                     <th>Hobbies</th>
+                    <th  >Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -149,7 +155,12 @@ const F_09_10_Api1 = () => {
                                 <td>{x.city}</td>
                                 <td>{x.age}</td>
                                 <td>{x.gender}</td>
-                                <td>{x.hobbies}</td>
+                                <td>{x.hobbies?.join(',')}</td>
+                                <td >
+                                    <button className='btn btn-danger' onClick={() => apiDelete(x._id)}>Delete</button>
+                                    {/* <button className='btn btn-warning mx-2' onClick={() => apiEdit(x._id)}>Edit</button> */}
+                                    <button className='btn btn-warning ' onClick={() => apiEdit(x)}>Edit</button>
+                                </td>
                             </tr>
                         )
                     })
