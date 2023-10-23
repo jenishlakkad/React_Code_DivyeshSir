@@ -22,6 +22,13 @@ import C_06_10_UseContext from './Components/ClassComponents/C_06_10_UseContext'
 import F_09_10_Api1 from './Components/FunctionComponents/F_09_10_Api1';
 import F_16_10_UseMemo from './Components/FunctionComponents/F_16_10_UseMemo';
 import F_16_10_CallBack from './Components/FunctionComponents/F_16_10_CallBack';
+import C_18_10_Api1 from './Components/ClassComponents/C_18_10_Api1';
+import F_19_10_FormValidation from './Components/FunctionComponents/F_19_10_FormValidation';
+import F_23_10_Routing1 from './Pages/F_23_10_Routing1';
+import F_23_10_NevigationBar from './Pages/F_23_10_NevigationBar';
+import F_23_10_Form from './Pages/F_23_10_Form';
+import { BrowserRouter } from 'react-router-dom';
+import F_23_10_Main from './Pages/F_23_10_Main';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -79,7 +86,20 @@ function App() {
 
       {/* <F_16_10_UseMemo/> */}
 
-      <F_16_10_CallBack/>
+      {/* <F_16_10_CallBack/> */}
+
+      {/* <C_18_10_Api1/> */}
+
+      {/* <F_19_10_FormValidation/> */}
+
+      {/* <F_23_10_Routing1/> */}
+
+      {/* <F_23_10_NevigationBar/> */}
+
+      {/* <BrowserRouter> */}
+        {/* <F_23_10_Form/> */}
+        <F_23_10_Main/>
+      {/* </BrowserRouter> */}
     </>
   );
 }
