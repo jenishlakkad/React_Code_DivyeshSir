@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
-import F_23_10_NevigationBar from './F_23_10_NevigationBar';
 
 const F_23_10_Form = () => {
     const [validated, setValidated] = useState(false);
@@ -20,7 +19,6 @@ const F_23_10_Form = () => {
   
   return (
     <>
-        {/* <F_23_10_NevigationBar/> */}
         <h2 className='text-center font-monospace'>Form Page</h2>
         <Form className='container mt-5 w-50' noValidate validated={validated} onSubmit={handleSubmit}>
         <Row className="mb-3">

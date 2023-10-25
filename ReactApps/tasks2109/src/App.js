@@ -23,6 +23,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Exam from './Components/Exam';
 import Form from './Components/Form';
 import FormHedlingClass from './Components/Form';
+import Navigation from './Pages/Navigation';
+import Main from './Pages/Main';
 // import { Form } from 'react-bootstrap';
 
 function App() {
@@ -35,7 +37,9 @@ function App() {
 
       {/* <Task2109/> */}
 
-      <FormHedlingClass />
+      {/* <FormHedlingClass /> */}
+
+      <Main/>
 
 
     </div>
