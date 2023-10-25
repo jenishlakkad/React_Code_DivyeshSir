@@ -29,6 +29,7 @@ import F_23_10_NevigationBar from './Pages/F_23_10_NevigationBar';
 import F_23_10_Form from './Pages/F_23_10_Form';
 import { BrowserRouter } from 'react-router-dom';
 import F_23_10_Main from './Pages/F_23_10_Main';
+import Main_1 from './25_10_23_UseParams/Main_1';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -98,8 +99,10 @@ function App() {
 
       {/* <BrowserRouter> */}
         {/* <F_23_10_Form/> */}
-        <F_23_10_Main/>
+        {/* <F_23_10_Main/> */}
       {/* </BrowserRouter> */}
+
+      <Main_1/>
     </>
   );
 }
