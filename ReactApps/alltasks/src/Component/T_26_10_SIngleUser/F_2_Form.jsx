@@ -1,19 +1,15 @@
+// Date:-26/10/23
+// Day:- Thursday
+// Topic:- Single User
+
 import React, { useContext, useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
-import { data } from './C_5_UseContext'
+import { data } from './F_4_UseContext0'
 
 
-const C_3_Form = () => {
+const F_2_Form = () => {
     const datas = useContext(data)
-//   let [arr, setArr] = useState([])
-//     let [obj, setObj] = useState({})
-//     let [blankObj, setblankObj] = useState({})
-//     let [count, setCount] = useState(0)
-
-//     //Valid State
-//     let [hobbyValid, setHobbyValid] = useState('')
-//     let [mailValid, setMailValid] = useState('')
-//     let [conValid, setConValid] = useState('')
+    
 
     const handelChange = async (e) => {
         if (e.target.type === 'checkbox') {
@@ -138,10 +134,9 @@ const C_3_Form = () => {
                 </form>
             </div>
 
-
-             
+ 
         </>
     )
 }
 
-export default C_3_Form
+export default F_2_Form

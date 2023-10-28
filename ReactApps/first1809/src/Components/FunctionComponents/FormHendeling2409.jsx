@@ -197,7 +197,7 @@ const FormHendeling2409 = () => {
             array.splice(index,1,obj)
         }
     }
-    const editData = () =>{
+    const editData = (id) =>{
         let editData = array.find(x => x.id == id)
         obj = editData;
         setobj({...obj})

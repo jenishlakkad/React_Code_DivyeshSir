@@ -47,7 +47,7 @@ const F_09_10_Api1 = () => {
     
     const addApi = () => {
         if(obj._id){
-            obj.id =   obj._id
+            obj.id =  obj._id
             axios.post('https://student-api.mycodelibraries.com/api/student/update',obj).then((res) => {
                 axasdy()
             })
