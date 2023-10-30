@@ -30,6 +30,7 @@ import F_23_10_Form from './Pages/F_23_10_Form';
 import { BrowserRouter } from 'react-router-dom';
 import F_23_10_Main from './Pages/F_23_10_Main';
 import Main_1 from './25_10_23_UseParams/Main_1';
+import F1_Main from './28_10_23_HOC/F1_Main';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -102,7 +103,12 @@ function App() {
         {/* <F_23_10_Main/> */}
       {/* </BrowserRouter> */}
 
-      <Main_1/>
+      
+      {/* <Main_1/> */}
+
+      <F1_Main/>
+
+
     </>
   );
 }
