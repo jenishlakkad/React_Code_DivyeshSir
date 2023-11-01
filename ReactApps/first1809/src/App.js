@@ -31,6 +31,7 @@ import { BrowserRouter } from 'react-router-dom';
 import F_23_10_Main from './Pages/F_23_10_Main';
 import Main_1 from './25_10_23_UseParams/Main_1';
 import F1_Main from './28_10_23_HOC/F1_Main';
+import F1_FormValidation from './31_10_23_FormValidation/F1_FormValidation';
 
 function App() {
   const [name, setname] = useState('Jenish Lakkad')
@@ -106,7 +107,9 @@ function App() {
       
       {/* <Main_1/> */}
 
-      <F1_Main/>
+      {/* <F1_Main/> */}
+
+      <F1_FormValidation/>
 
 
     </>

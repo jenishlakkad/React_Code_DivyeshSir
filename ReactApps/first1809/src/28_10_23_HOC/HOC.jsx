@@ -1,12 +1,30 @@
 import { NavLink, Navigate, useNavigate } from "react-router-dom"
+import Swal  from 'sweetalert2'
 
 export const HOC = (Component) => {
     const NewComponent = (props) => {
         let navigate = useNavigate()
         const signOut = () =>{
-            localStorage.setItem('isLogin',false)
-            props.setisLogin(false)
-            navigate('/')
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You wont to Logout",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'LogOut'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    localStorage.setItem('isLogin',false)
+                    props.setisLogin(false)
+                    navigate('/login')
+                  Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                  )
+                }
+              })
         }
         return <>
              <div className="main1">
@@ -22,7 +40,8 @@ export const HOC = (Component) => {
                     <div className="shadow p-2 d-flex ">
                         <input type="search" placeholder="Search..." className="me-2 rounded-3 p-2" />
                         <span className="ms-auto">
-                            <NavLink to={'/login'}> 
+                            {/* <NavLink to={'/login'}>  */}
+                            <NavLink  > 
                             <input type="button" className="btn bg-dark-subtle  ms-auto " onClick={signOut} value="Sign Out"/>
                             </NavLink>
                         </span>

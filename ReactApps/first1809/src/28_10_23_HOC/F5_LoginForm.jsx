@@ -41,7 +41,14 @@ const emptyLocalHost = () =>{
       else{
         alert('Invalid')
         // navigate('/register')
-      } 
+        // document.querySelector('#regBtn').classList.remove('d-none')
+        // document.querySelector('#regBtn').classList.add('d-block')
+        } 
+  }
+
+  // Register Buttton
+  const register = () =>{
+    navigate('/register')
   }
 
   return (
@@ -59,8 +66,7 @@ const emptyLocalHost = () =>{
                 name='email'
                 placeholder="Enter your email"
                 // value={obj.email}
-                onChange={handleEmailChange}
-                 
+                onChange={handleEmailChange} 
               />
             </div>
             <div className="form-group">
@@ -72,11 +78,13 @@ const emptyLocalHost = () =>{
                 name='password'
                 placeholder="Enter your password"
                 // value={obj.password}
-                onChange={handlePasswordChange}
-                 
+                onChange={handlePasswordChange} 
               />
             </div>
-            <button type="button" onClick={login}  className="btn btn-primary">Submit</button>
+            <div className='mt-3 text-end'>
+              <button type="button" onClick={login}  className="btn me-2 btn-primary">Submit</button>
+              <button type="button" id='regBtn' onClick={register}  className=" btn btn-dark d">Register</button>
+            </div>
           </form>
         </div>
       </div>

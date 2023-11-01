@@ -1,0 +1,11 @@
+[
+    {
+        "name" : "name",
+        "conditions" : [
+            {
+            "condition" : "obj.name == undefined || obj.name == ''",
+            "error" : "First Name is Required"
+            }
+        ]
+    }
+]
